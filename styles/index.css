@@ -6,6 +6,7 @@
     --black-1: #2B2222;
     --brown-1: #816765;
     --brown-2: #C97961;
+    --red-1: #F66055;
 }
 
 * {
@@ -105,12 +106,96 @@ body {
     flex: 1 0 100px;
 }
 
+.wrapper__content__informations {}
+
+.informations__bar {
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.informations__bar--cv {
+    height: 100%;
+   
+}
+
+.informations__bar--cv a {
+    text-decoration: none;
+    background: var(--red-1);
+    color: white;
+    padding: .5rem 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    flex-wrap: wrap;
+    gap: .5rem;
+    font-weight: 600;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.informations__bar--cv a img {
+    text-decoration: none;
+    width: 1.5em;
+}
+
+
+
+
+
+.max-width-50 {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
 @media(max-width: 300px) {
     .profile__experience {
         flex-wrap: wrap;
         gap: .5rem;
     }
+
+    .max-width-50 {
+        max-width: 100%;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* PERFIL ANTIGO */
 
