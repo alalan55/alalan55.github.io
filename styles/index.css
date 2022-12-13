@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
     /* PARA CORES */
     --bg-white: #FFFAFA;
+    --black-1: #2B2222;
+    --brown-1: #816765;
+    --brown-2: #C97961;
 }
 
 * {
@@ -12,7 +15,7 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 
 }
 
@@ -20,17 +23,94 @@ body {
 .wrapper {
     background-color: var(--bg-white);
     min-height: 100vh;
+    color: var(--black-1);
 }
 
 .wrapper__content {
     max-width: 1000px;
     margin: 0 auto;
+    /* border: 2px solid green; */
+    padding: 3rem 1rem 2rem;
 }
 
 .wrapper__content__profile {
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
+.wrapper__content__profile>figure {
+    height: 160px;
+    width: 160px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.wrapper__content figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile__descriptions {
+    text-align: center;
+}
+
+.profile__descriptions h2 {
+    font-weight: 700;
+}
+
+.profile__descriptions small {
+    color: var(--brown-1);
+}
+
+.profile__socials-medias {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile__socials-medias figure {
+    width: 35px;
+    height: 35px;
+    transition: .2s ease-in-out;
+}
+
+.profile__socials-medias figure:hover {
+    transform: translateY(-5px);
+}
+
+.profile__socials-medias figure:hover img {
+    filter: invert(58%) sepia(62%) saturate(389%) hue-rotate(326deg) brightness(83%) contrast(87%);
+}
+
+.profile__socials-medias figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.profile__experience {
+    padding: 1rem 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.profile__experience>div {
+    text-align: center;
+    flex: 1 0 100px;
+}
+
+@media(max-width: 300px) {
+    .profile__experience {
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+}
 
 /* PERFIL ANTIGO */
 
