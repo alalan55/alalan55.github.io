@@ -7,6 +7,8 @@
     --brown-1: #816765;
     --brown-2: #C97961;
     --red-1: #F66055;
+    --grey-1: #ECE9E9;
+    --grey-2: #cac9c9;
 }
 
 * {
@@ -106,6 +108,10 @@ body {
     flex: 1 0 100px;
 }
 
+.profile__experience>div span {
+    color: var(--brown-1);
+}
+
 .wrapper__content__informations {}
 
 .informations__bar {
@@ -118,10 +124,15 @@ body {
 
 .informations__bar--cv {
     height: 100%;
-   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+
 }
 
-.informations__bar--cv a {
+.informations__bar--cv .download {
     text-decoration: none;
     background: var(--red-1);
     color: white;
@@ -130,18 +141,37 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-   
     flex-wrap: wrap;
     gap: .5rem;
     font-weight: 600;
     border-radius: 10px;
     text-align: center;
-
 }
 
 .informations__bar--cv a img {
     text-decoration: none;
     width: 1.5em;
+}
+
+.informations__bar--cv .wpp {
+    background: var(--grey-1);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+}
+
+.informations__bar--cv .wpp:hover {
+    background: var(--grey-2);
+}
+
+.informations__bar--cv .wpp img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
 }
 
 
